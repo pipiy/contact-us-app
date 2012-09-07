@@ -24,3 +24,9 @@ group :test do
   gem 'database_cleaner'
 end
 
+group :development do
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'ruby_gntp'
+end
+
