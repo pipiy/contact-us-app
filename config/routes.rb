@@ -1,7 +1,6 @@
 Demo::Application.routes.draw do
-  get "contact/us"
+resources :contact, :only => [:new, :create]
 
-  get "welcome/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

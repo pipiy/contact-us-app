@@ -1,31 +1,43 @@
-Given /^I am stay on homepage$/ do
+Given /^I am on the home page$/ do
   visit('/')
 end
 
-When /^I press contact us$/ do
-  click_on('Contact')
+When /^I press the contact us button$/ do
+  click_on('Contact Us')
 end
 
-Then /^I should see the new contact page$/ do
-  page.should have_content('Contact us')
+Then /^I should see the new contact us page$/ do
+  page.should have_content('Contact Us Page')
 end
 
 When /^I fill in name$/ do
-  fill_in('Name', :with => 'Jack')
+  fill_in('contact[name]', :with => 'Jack')
 end
 
 When /^I fill in email$/ do
-  fill_in('Email', :with => 'example.example@gmail.com')
+  fill_in('contact[email]', :with => 'example@gmail.com')
 end
 
 When /^I fill in description$/ do
-  fill_in('Description', :with => 'Test description')
+  fill_in('contact[description]', :with => 'Test description for sent messages')
 end
 
-When /^I press send$/ do
+When /^I press the send button$/ do
   click_on('Send')
 end
 
-Then /^I should see the flash notice$/ do
-  page.should have_content('Message was sent successfully')
+Then /^I should see that the message was successfully sent$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Given /^I am on the contact us page$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+When /^I forgot to fill one of the required fields$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see the error message$/ do
+  pending # express the regexp above with the code you wish you had
 end

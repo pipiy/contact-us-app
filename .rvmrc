@@ -1,1 +1,1 @@
-rvm use --create ruby-1.9.3-p194@contact-us-app
+rvm use --create 1.9.3@contact-us-app

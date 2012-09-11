@@ -1,0 +1,7 @@
+<h1>Contact Us Page</h1>
+<%= form_for @contact, :url => {:action => :create} do |f| %>
+	Name: <%= f.text_field :name %><br />
+	Email: <%= f.text_field :email %><br />
+	Description: <br /> <%= f.text_area :description %>
+	<br /><%= f.submit 'Send' %>
+<% end %>
