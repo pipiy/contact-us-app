@@ -27,17 +27,17 @@ When /^I press the send button$/ do
 end
 
 Then /^I should see that the message was successfully sent$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content("Message was successfully sent.")
 end
 
 Given /^I am on the contact us page$/ do
-  pending # express the regexp above with the code you wish you had
+  click_on('Contact Us')
 end
 
 When /^I forgot to fill one of the required fields$/ do
-  pending # express the regexp above with the code you wish you had
+  fill_in('contact[name]', :with => '')
 end
 
 Then /^I should see the error message$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content('Please fill all fields')
 end
