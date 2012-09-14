@@ -1,6 +1,7 @@
 When /^users sent a message from the contact us page$/ do
   steps %Q{
-  	Given I am on the contact us page
+  	Given I am on the home page
+  	When I press the contact us button
   	And I fill in name
 	And I fill in email
 	And I fill in description
