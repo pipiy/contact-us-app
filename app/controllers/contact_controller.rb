@@ -7,10 +7,10 @@ class ContactController < ApplicationController
   	@contact = Contact.new(params[:contact])
 
   	if @contact.save
-  		redirect_to root_path, :notice => "Message was successfully sent."
-  	else
-  		flash.now.alert = "Please fill all fields"
+      ContactMailer.new_contact(@contact).deliver
 
+  		redirect_to root_path, :notice => "Message was successfully sent."
+    else
       render :new
   	end
   end
