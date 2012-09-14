@@ -14,5 +14,9 @@ end
 
 
 Then /^the message should include the user details and a message$/ do
-  pending # express the regexp above with the code you wish you had
+  email.body.should include('Jack')
+  email.body.should include('example@gmail.com')
+  email.body.should include('Test description for sent messages')
+  email.subject.should == "Contact us"
+  email.to.should include("artem.slabodnik@gmail.com")
 end
