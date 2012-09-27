@@ -39,5 +39,5 @@ When /^I forgot to fill one of the required fields$/ do
 end
 
 Then /^I should see the error message$/ do
-  page.should have_content('Please fill all fields')
+  page.should have_content('List of Errors:')
 end
